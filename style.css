@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: aliceblue;
+    width: 100%;
+    height: 100vh;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: slateblue;
+}
+
+.boxPesquisa{
+    position: fixed;
+    background-color: rgba(240, 248, 255, 0.9);
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 113px;
+    z-index: 999;
+}
+.boxPesquisa .DarkMode{
+    position: absolute;
+    background-color: rgba(17, 16, 20, 0.888);
+    right: 50px;
+    top: 9px;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    font-size: 17px;
+    padding: 5px;
+    transition: 0.3s;
+}
+.boxPesquisa #pesquisar{
+    width: 80%;
+    padding: 1px;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    border-bottom: 2px solid rgb(88, 87, 87);
+}
+.boxPesquisa #lupa{
+    font-size: 25px;
+    color: rgb(88, 87, 87);
+}
+.boxPesquisa #infoNotGame{
+    position: absolute;
+    border: 2px solid rgb(88, 87, 87);
+    padding: 10px;
+    bottom: -77px;
+    display: none;
+    width: 97%;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    background-color: transparent;
+    top: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    flex-direction: column;
+}
+.container .boxIten{
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 87%;
+    height: 437px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+.container .boxIten h2{
+    display: none;
+}
+.container .boxIten img{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.container .boxIten img:hover{
+    animation: pulsar .7s ;
+}
+.container .boxIten button{
+    position: absolute;
+    background-color: aliceblue;
+    width: 55px;
+    height: 55px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 1;
+    bottom: -7px;
+    left: -10px;
+    font-size: 21px;
+    cursor: pointer;
+}
+.container .boxIten button i{
+    animation: pulsar 0.4s;
+}
+
+.body-darkness {
+    background-color: rgb(24, 24, 28);
+    color: rgb(215, 212, 212);
+}
+.shine{
+    box-shadow: 0px 3px 13px yellow;
+}
+body .boxpesquisa-darkness{
+    background-color: rgba(24, 24, 28, 0.858);
+    background-image: url("img/fundo\ com\ estrelas.gif");
+}
+.boxPesquisa .input-darkness{
+    color: rgb(215, 212, 212);
+}
+.boxIten button.button-darkness{
+    background-color: rgb(24, 24, 28);
+    color: rgb(215, 212, 212);
+}
+
+@keyframes pulsar {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+.container footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+.container footer #voltar-ao-topo{
+    font-size: 27px;
+}.container footer #voltar-ao-topo i{
+    cursor: pointer;
+}
+
+@media(min-width:400px){
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .boxPesquisa{
+        width: 80%;
+    }
+    .boxPesquisa #pesquisar{
+        width: 70%;
+    }
+    .boxPesquisa .DarkMode{
+       right: 50px;
+    }
+    .container{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .container .boxIten{
+        width: 300px;
+        height: 400px;
+        
+    }
+
+}
+@media(min-width:600px){
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .boxPesquisa{
+        width: 70%;
+    }
+    .boxPesquisa #pesquisar{
+        width: 50%;
+    }
+    .boxPesquisa #infoNotGame{
+        text-align: center;
+        width: 50%;
+    }
+    .container{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .container .boxIten{
+        width: 300px;
+        height: 400px;
+        
+    }
+
+}
+
